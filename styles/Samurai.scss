@@ -1,0 +1,21 @@
+ * {
+    margin:0;
+    padding: 0;
+ }
+ 
+ body {
+    background-color: rgb(243, 239, 235);
+  }
+
+  button {
+   margin: -100;
+  }
+
+  img {
+   display:none;
+  }
+   #enemyImg {
+      // display: block;
+      // transform: scale(-1,1);
+   }
+  canvas {border: 1px solid black;}
