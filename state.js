@@ -32,17 +32,17 @@ export class Idle extends State {
   handleInput(input) {
     if (input === 'PRESS a') {
       this.player.setState(state.attack1)
-      background.speed = 0
+      // background.speed = 0
     }
     if (input === 'PRESS q') {
       this.player.setState(
         state.attack2
       )
-      background.speed = 0
+      // background.speed = 0
     }
     if(input === 'PRESS z') {
       this.player.setState(state.attack3)
-      background.speed = 0
+      // background.speed = 0
     }
     if(input === 'PRESS s') {
       this.player.setState(state.shield)
@@ -166,7 +166,7 @@ export class Dead extends State {
     this.player.gameOver = true
    },90) 
   }
-  handleInput() {}
+  handleInput(input) {}
 }
 
 export class Hurt extends State {

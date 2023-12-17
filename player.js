@@ -45,6 +45,7 @@ export default class Player {
     this.weight = 0.4
     this.hp = 2
     this.gameOver = false
+    this.score = 0
   }
   draw(context, deltatime,enemies) {
     if (this.frameTimer > this.frameInterval) {
@@ -93,24 +94,26 @@ export default class Player {
           this.setState(0)
           enemy.markedForDeletion = true
           this.gameOver = false 
+          this.score += 1
         }
       if(input === 'PRESS q') {
         clearTimeout(hurtTime)
         this.setState(1)
          enemy.markedForDeletion = true
          this.gameOver = false
+         this.score += 1
       }
       if(input === 'PRESS z') {
         clearTimeout(hurtTime)
         this.setState(2)
         enemy.markedForDeletion = true
         this.gameOver = false
+        this.score += 1
       }
       
     } else {
       this.setState(5)
     }
-      console.log(Math.ceil(this.hp))
      });
     
     if (this.x >= this.gameWidth - this.width) {

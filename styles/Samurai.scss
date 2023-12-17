@@ -4,18 +4,59 @@
  }
  
  body {
-    background-color: rgb(243, 239, 235);
+    background-color: rgb(0, 0, 0);
+  }
+  .btnContainer {
+   display: grid;
+   background-color: rgb(34, 36, 36);
+   width:80%;
+   min-height: 110px;
+   margin:25px auto;
+//   grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  }
+  .btn {
+   // place-self: center;
+   width: 100px;
+   display: block;
+   font-family: monospace;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 10px;
+   color:rgb(0, 0, 0);
+   background-color: rgb(255, 255, 255);
+   border:none;
+   outline: 1px solid grey;
+   &.active {
+      color:white;
+      background-color: rgb(5, 125, 172);
+      transform: scale(0.94);
+   }
+   &:nth-child(4) {
+      grid-column: 2/span 1;
+   }
   }
 
-  button {
-   margin: -100;
+  .canCon {
+   position: relative;
   }
-
+  .restartBtn {
+   @extend .btn;
+   position: absolute;
+   top: 160px;
+   left: 39.5%;
+   &.hide {
+      display:none;
+   }
+  }
   img {
    display:none;
   }
-   #enemyImg {
-      // display: block;
-      // transform: scale(-1,1);
-   }
-  canvas {border: 1px solid black;}
+   
+  canvas {
+   max-width: 100%;
+   max-height: 100%;
+   border: 1px solid white;
+}
