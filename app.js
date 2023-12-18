@@ -5,6 +5,10 @@ import Background from "./background.js"
 import { drawStatusText } from "./utils.js"
 export let background
 
+let isGameStarted
+const instruction = document.querySelector('.instruction')
+const game = document.querySelector('.game')
+
 window.addEventListener('load', () => {
 let canvas = document.querySelector('canvas')
 const attack = document.querySelector('#attack')
@@ -40,6 +44,12 @@ function handleEnemies(deltatime) {
  enemies = enemies.filter(enemy => !enemy.markedForDeletion)
 }
 
+instruction.addEventListener('click', () => {
+    instruction.classList.add('hide')
+    game.classList.remove('hide')
+    isGameStarted = true
+   })
+
 let player
 let input
 function  init() {
@@ -58,7 +68,9 @@ function animate(timestamp) {
     background.update()
     player.draw(ctx,deltatime,enemies)
     player.update(input.lastKey,enemies)
-    handleEnemies(deltatime)
+   if(isGameStarted) {
+     handleEnemies(deltatime)
+   }
     drawStatusText(ctx, input,player)
     if(!player.gameOver) 
     requestAnimationFrame(animate)
