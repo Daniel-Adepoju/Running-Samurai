@@ -4,12 +4,18 @@ import HandleInput from "./handleInput.js"
 import Background from "./background.js"
 import { drawStatusText } from "./utils.js"
 export let background
+export let restartBtn = document.querySelector('.restartBtn')
 
 let isGameStarted
 const instruction = document.querySelector('.instruction')
 const game = document.querySelector('.game')
 
 window.addEventListener('load', () => {
+    restartBtn.addEventListener('click', (e) => {
+       e.target.classList.add('hide')
+       init()
+       animate(0)
+    })
 let canvas = document.querySelector('canvas')
 const attack = document.querySelector('#attack')
 canvas.width = window.innerWidth

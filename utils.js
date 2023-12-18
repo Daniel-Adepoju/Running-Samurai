@@ -1,7 +1,4 @@
-const restartBtn = document.querySelector('.restartBtn')
- restartBtn.addEventListener('click', () => {
-    window.location.reload()
- })
+import { restartBtn } from "./app.js"
  export function drawStatusText(context,input,player) {
     context.font = '30px monospace'
     context.fillStyle = 'black'
