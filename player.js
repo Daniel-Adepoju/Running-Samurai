@@ -8,7 +8,7 @@ import {
   Dead,
   Attack3,
   Hurt,
-  Shield,
+  Shield, 
   Jump,
 } from './state.js'
 import { background } from './app.js'

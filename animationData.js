@@ -6,7 +6,7 @@
 {
     name:'attack2',
     frames: 4
-},
+}, 
 {
     name:'attack3',
     frames: 3

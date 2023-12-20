@@ -9,7 +9,7 @@ import { restartBtn } from "./app.js"
     context.fillStyle = 'white'
     context.fillText(`HP: ${Math.ceil(player.hp)}X`,50,40)
     context.fillText(`Score: ${Math.ceil(player.score)}`,50,70)
-
+ 
     if(player.gameOver) {
   context.font = '17px monospace'
   context.fillStyle = 'darkblue'

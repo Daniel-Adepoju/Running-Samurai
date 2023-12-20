@@ -12,7 +12,7 @@ export default class Background {
     this.frameTimer = 0
     this.frameInterval = 1000 / this.fps
  }
-
+ 
 
   draw(ctx) {
  ctx.drawImage(this.image,this.x - 99,this.y,this.width,this.height)

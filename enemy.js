@@ -1,6 +1,6 @@
 
 const enemyImgs = ['enemyImg','enemyImg2','enemyImg3']
-
+ 
 export default class Enemy {
     constructor(gameWidth, gameHeight) {
         this.gameWidth = gameWidth

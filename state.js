@@ -9,7 +9,7 @@ export const state = {
   run: 7,
   shield: 8,
   walk: 9,
-}
+} 
 import { background } from "./app.js"
 
 class State {

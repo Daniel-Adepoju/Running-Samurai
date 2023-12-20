@@ -4,7 +4,7 @@ export default class HandleInput {
     constructor() {
         this.keys = []
         this.lastKey = ''
-
+ 
         //PC
         window.addEventListener('keydown', (e) =>{
            if ((e.key ==='ArrowUp' ||

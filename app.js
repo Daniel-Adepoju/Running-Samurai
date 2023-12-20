@@ -5,7 +5,7 @@ import Background from "./background.js"
 import { drawStatusText } from "./utils.js"
 export let background
 export let restartBtn = document.querySelector('.restartBtn')
-
+ 
 let isGameStarted
 const instruction = document.querySelector('.instruction')
 const game = document.querySelector('.game')
